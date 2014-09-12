@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <header>
+    <header class="logo">
         <h1>ProjectX</h1>
     </header>
 </html>

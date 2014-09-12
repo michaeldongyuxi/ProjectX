@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Michael
  */
 @WebServlet(name = "Confirmation", urlPatterns = {"/Confirmation"})
-public class TestServlet extends HttpServlet {
+public class ServletOne extends HttpServlet {
     
     String name;
     String email;

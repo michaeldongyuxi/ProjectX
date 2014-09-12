@@ -14,7 +14,12 @@
         <title>Test Project</title>
     </head>
     
+    <header>
     <jsp:include page="header.jsp" />
+    
+    </header>
+    
+    <a href="Login.jsp" name="Administrator Login" class="login">Administrator Login</a>
     
     <body>
         
@@ -35,8 +40,10 @@
 
     
         <img src="<c:url value="/images/DSC_5750.JPG" />" hight="200" height="200">
+        <section>I have no idea what's this dinosaur doing here either.</section>
+        <br><br><br><br><br><br><br><br><br><br><br>
         
-        
+        <p>Team ProjectX</p>
         
     </body>
 </html>
