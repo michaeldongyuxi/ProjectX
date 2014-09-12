@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +28,10 @@
             <div>How many people is coming?</div>
             <input name="people" type="text" required><br><br>
             <input type="submit">
-        </form>
+        </form><br>
+
+    
+        <img src="<c:url value="/images/DSC_5750.JPG" />" hight="200" height="200">
         
         
         
