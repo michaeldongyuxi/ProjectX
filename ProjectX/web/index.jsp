@@ -13,9 +13,12 @@
         <link href="stylesheet/stylesheetOne.css" rel="stylesheet" type="text/css" />
         <title>Test Project</title>
     </head>
+    
+    <jsp:include page="header.jsp" />
+    
     <body>
         
-        <h1>Welcome to Online Waiting System</h1>
+        <h1 class="title">Welcome to Online Waiting System</h1>
         
         <h2>Please enter your information</h2>
         

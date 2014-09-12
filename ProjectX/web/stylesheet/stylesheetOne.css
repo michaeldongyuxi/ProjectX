@@ -24,7 +24,15 @@ form.formOne{
     
 }
 
-h1{
+h1.title{
     color: rosybrown;
 }
 
+header{
+    font-size: 10px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    padding: 1px;
+    width: 80px;
+    margin:0px 0px 0px 0px;
+}
