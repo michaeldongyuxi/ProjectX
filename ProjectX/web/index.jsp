@@ -33,7 +33,7 @@
             <input name="email" type="email" required><br><br>
             <div>Please enter your name:</div>
             <input name="name" type="text" required><br><br>
-            <div>How many people is coming?</div>
+            <div>How many people are coming?</div>
             <input name="people" type="text" required><br><br>
             <input type="submit">
         </form><br>

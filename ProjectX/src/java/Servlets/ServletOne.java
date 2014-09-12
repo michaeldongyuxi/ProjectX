@@ -92,6 +92,22 @@ public class ServletOne extends HttpServlet {
             System.out.println("print name is: " + name);
             sc.getRequestDispatcher(url).forward(request, response);
         }
+        
+        else if(action.equals("login"))
+        {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            if(username.equals("projectx") && password.equals("helloworld"))
+            {
+                url = "/welcome.jsp";
+                sc.getRequestDispatcher(url).forward(request, response);
+            }
+            else
+            {
+                url = "/Login.jsp";
+                sc.getRequestDispatcher(url).forward(request, response);
+            }
+        }
     }
 
     /**
