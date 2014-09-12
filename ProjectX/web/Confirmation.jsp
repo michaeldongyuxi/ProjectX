@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Please Confirm Your Info</h1>
-        <div>Email: ${email}</div><br><br>
+        <div>Name: ${name}</div><br>
+        <div>Email: ${email}</div><br>
         <div>People are coming: ${people}</div><br><br>
         
         <form action="Confirmation" method="post">

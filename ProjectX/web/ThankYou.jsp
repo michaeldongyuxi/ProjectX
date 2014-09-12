@@ -13,7 +13,7 @@
         <title>Thank you</title>
     </head>
     <body>
-        <h1>Thank you.</h1>
+        <h1>Thank you ${name}.</h1>
         <h2>Your number is: 190</h2>
         <h2>There are 15 people ahead.</h2>
     </body>

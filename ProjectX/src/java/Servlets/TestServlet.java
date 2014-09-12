@@ -21,6 +21,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Confirmation", urlPatterns = {"/Confirmation"})
 public class TestServlet extends HttpServlet {
+    
+    String name;
+    String email;
+    String people;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,8 +65,7 @@ public class TestServlet extends HttpServlet {
         
         String url;
         String action = request.getParameter("messageType");
-        String email = request.getParameter("email");
-        String people = request.getParameter("people");
+        
         ServletContext sc = getServletContext();
         
         System.out.println("action is: "+action);
@@ -70,6 +73,11 @@ public class TestServlet extends HttpServlet {
         if(action.equals("submitInfo"))
         {
             
+            name = request.getParameter("name");
+            email = request.getParameter("email");
+            people = request.getParameter("people");
+            
+            request.setAttribute("name", name);
             request.setAttribute("email", email);
             request.setAttribute("people", people);
             
@@ -79,8 +87,9 @@ public class TestServlet extends HttpServlet {
         
         else if(action.equals("confirm"))
         {
-            System.out.println("got here");
             url = "/ThankYou.jsp";
+            request.setAttribute("name", name);
+            System.out.println("print name is: " + name);
             sc.getRequestDispatcher(url).forward(request, response);
         }
     }
