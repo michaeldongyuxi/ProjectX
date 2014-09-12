@@ -22,6 +22,8 @@
             <input type="hidden" name="messageType" value="submitInfo">
             <div>Please enter your email:</div>
             <input name="email" type="email" required><br><br>
+            <div>Please enter your name:</div>
+            <input name="name" type="text" required><br><br>
             <div>How many people is coming?</div>
             <input name="people" type="text" required><br><br>
             <input type="submit">
