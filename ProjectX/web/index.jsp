@@ -39,8 +39,8 @@
         </form><br>
 
     
-        <img src="<c:url value="/images/DSC_5750.JPG" />" hight="200" height="200">
-        <section>I have no idea what's this dinosaur doing here either.</section>
+        <img src="<c:url value="/images/DSC_5750.JPG" />" alt="dinosaur" hight="200" height="200">
+        <section>I have no idea what this dinosaur's doing here either.</section>
         <br><br><br><br><br><br><br><br><br><br><br>
         
         <p>Team ProjectX</p>

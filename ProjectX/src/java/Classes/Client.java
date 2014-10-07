@@ -79,7 +79,4 @@ public class Client {
         this.people = people;
     }
     
-    
-    
-    
 }

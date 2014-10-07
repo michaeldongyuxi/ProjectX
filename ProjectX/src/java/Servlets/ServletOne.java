@@ -108,6 +108,12 @@ public class ServletOne extends HttpServlet {
                 sc.getRequestDispatcher(url).forward(request, response);
             }
         }
+        else if(action.equals("nextCust"))
+        {
+            url = "/welcome.jsp";
+            request.setAttribute("totalCust", 100);
+            sc.getRequestDispatcher(url).forward(request, response);
+        }
     }
 
     /**
