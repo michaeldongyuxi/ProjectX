@@ -31,12 +31,12 @@
         <h1>Welcome, Team ProjectX</h1>
     </body>
     
-    <div>Total Called Customers: ${totalCust}</div>
-    
     <form action="Confirmation" method="post">
         <input type="hidden" name="messageType" value="nextCust">
-        <input type="submit" value="Next Client">
+        <input type="submit" value="Next Customer">
     </form>
+    
+    <div>Total Called Customers: ${totalCust}</div>
     
     <footer>
         <p>Team ProjectX</p>
