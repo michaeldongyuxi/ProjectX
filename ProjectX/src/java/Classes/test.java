@@ -14,7 +14,17 @@ public class test {
     
     public static void main(String[] args){
         DBCmd d = new DBCmd();
-        d.addUser(1, "hello", "hello", "hello", "hello", "hello");
+        d.addUser(1, "123", "456", "789", "10");
+        
+        
+        boolean check = d.validUser("7891", "101");
+        if(check)
+        {
+            System.out.println("Matched");
+        }
+        else{
+            System.out.println("Not match");
+        }
     }
     
 }

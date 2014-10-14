@@ -36,6 +36,21 @@
         <input type="submit" value="Next Customer">
     </form>
     
+    <form action="Confirmation" method = "post">
+        <input type="hidden" name="messageType" value="addCust">
+        <p>Please enter your username: </p>
+        <input type="text" name="user">
+        <p>Please enter your password: </p>
+        <input type="password" name="password">
+        <p>Please enter your first name: </p>
+        <input type="text" name="firstName">
+        <p>Please enter your last name: </p>
+        <input type="text" name="lastName">
+        <p>Please enter your E-mail address: </p>
+        <input type="email" name="email"><br>
+        <input type="submit" value="Register">
+    </form>
+    
     <div>Total Called Customers: ${totalCust}</div>
     
     <footer>

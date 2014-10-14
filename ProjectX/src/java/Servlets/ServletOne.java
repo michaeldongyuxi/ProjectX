@@ -6,6 +6,7 @@
 
 package Servlets;
 
+import Classes.DBCmd;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletContext;
@@ -25,6 +26,7 @@ public class ServletOne extends HttpServlet {
     String name;
     String email;
     String people;
+    DBCmd cmd = new DBCmd();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -112,6 +114,23 @@ public class ServletOne extends HttpServlet {
         {
             url = "/welcome.jsp";
             request.setAttribute("totalCust", 100);
+            sc.getRequestDispatcher(url).forward(request, response);
+        }
+        
+        else if(action.equals("addCust"))
+        {
+            url = "/ThanksForSignUp.jsp";
+            
+            
+            String password = request.getParameter("password");
+            String firstName = request.getParameter("firstName");
+            String lastName = request.getParameter("lastName");
+            String email = request.getParameter("email");
+            
+            cmd.addUser(1, lastName, firstName, email, password);
+            
+            request.setAttribute("totalCust", 100);
+            
             sc.getRequestDispatcher(url).forward(request, response);
         }
     }
