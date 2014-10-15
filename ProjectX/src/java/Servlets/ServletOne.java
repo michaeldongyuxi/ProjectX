@@ -109,7 +109,7 @@ public class ServletOne extends HttpServlet {
                         url="/AdminWelcome.jsp";
                         break;
                     case Constants.RESTURANT:
-                        url="/ResturantWelcome.jsp";
+                        url="/RestaurantWelcome.jsp";
                         break;
                     case Constants.CUSTOMER:
                         url="/CustomerWelcome.jsp";

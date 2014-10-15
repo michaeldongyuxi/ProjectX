@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ResturantWelcome
-    Created on : Oct 15, 2014, 2:55:57 PM
+    Document   : RestaurantWelcome
+    Created on : Oct 15, 2014, 3:05:11 PM
     Author     : Michael
 --%>
 
@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="stylesheet/stylesheetOne.css" rel="stylesheet" type="text/css" />
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>RESTURANT WELCOME</h1>
+        <h1>RESTAURANT WELCOME</h1>
     </body>
 </html>

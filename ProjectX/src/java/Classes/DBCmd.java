@@ -57,7 +57,7 @@ public class DBCmd {
             String Email, String Password, int Type){
         
         StringBuilder mutableString = new StringBuilder();
-        mutableString.append("INSERT user");
+        mutableString.append("INSERT User");
         mutableString.append("(id, LastName, FirstName, Email, Password, Type)");
         mutableString.append("VALUES");
         mutableString.append("(");
