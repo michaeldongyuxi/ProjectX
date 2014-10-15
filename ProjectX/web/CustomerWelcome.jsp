@@ -14,5 +14,9 @@
     </head>
     <body>
         <h1>CUSTOMER WELCOME</h1>
+        <form action="Confirmation" method = "post">
+            <input type="hidden" name="messageType" value="logOut">
+            <input type="submit" value="Log out">
+        </form>
     </body>
 </html>

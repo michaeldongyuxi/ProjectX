@@ -145,6 +145,13 @@ public class ServletOne extends HttpServlet {
             
             sc.getRequestDispatcher(url).forward(request, response);
         }
+        
+        else if(action.equals("logOut"))
+        {
+            url = "/index.jsp";
+            System.out.println("LogOut");
+            sc.getRequestDispatcher(url).forward(request, response);
+        }
     }
 
     /**
