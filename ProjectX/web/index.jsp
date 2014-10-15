@@ -19,7 +19,7 @@
     
     </header>
     
-    <a href="Login.jsp" name="Administrator Login" class="login">Administrator Login</a>
+    <a href="Login.jsp" name="Login" class="login">Login</a>
     <a href="SignUp.jsp" name="Sign up" class="SignUp">Sign up</a>
     
     <body>

@@ -45,3 +45,10 @@ a.login{
     top:10px;
     right:15px;
 }
+
+a.SignUp{
+    font-size: 15px;
+    position: fixed;
+    top:30px;
+    right:15px;
+}
