@@ -1,6 +1,6 @@
 <%-- 
-    Document   : BarsWelcome
-    Created on : Oct 15, 2014, 1:19:29 AM
+    Document   : ResturantWelcome
+    Created on : Oct 15, 2014, 2:55:57 PM
     Author     : Michael
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>RESTURANT WELCOME</h1>
     </body>
 </html>

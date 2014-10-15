@@ -16,6 +16,7 @@
         <h1>Sign Up</h1>
         <form action="Confirmation" method = "post">
         <input type="hidden" name="messageType" value="addCust">
+        <input type="hidden" name="userType" value="3">
         <p>Please enter your E-mail address: </p>
         <input type="email" name="email">
         <p>Please enter your password: </p>

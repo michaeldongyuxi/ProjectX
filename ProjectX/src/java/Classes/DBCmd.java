@@ -39,9 +39,9 @@ public class DBCmd {
     }
     
     public boolean addUser(int id, String LastName, String FirstName, 
-            String Email, String Password)
+            String Email, String Password, int Type)
     {
-        String cmdString = addUserCommand(id,LastName,FirstName,Email,Password);
+        String cmdString = addUserCommand(id,LastName,FirstName,Email,Password, Type);
         try {
             System.out.println("Executed");
             statement.executeUpdate(cmdString);
@@ -54,18 +54,19 @@ public class DBCmd {
     }
     
     private String addUserCommand(int id, String LastName, String FirstName, 
-            String Email, String Password){
+            String Email, String Password, int Type){
         
         StringBuilder mutableString = new StringBuilder();
-        mutableString.append("INSERT customer");
-        mutableString.append("(id, LastName, FirstName, Email, Password)");
+        mutableString.append("INSERT user");
+        mutableString.append("(id, LastName, FirstName, Email, Password, Type)");
         mutableString.append("VALUES");
         mutableString.append("(");
         mutableString.append(id).append(",");
         mutableString.append("'").append(LastName).append("'").append(",");
         mutableString.append("'").append(FirstName).append("'").append(",");
         mutableString.append("'").append(Email).append("'").append(",");
-        mutableString.append("'").append(Password).append("'");
+        mutableString.append("'").append(Password).append("',");
+        mutableString.append(Type);
         mutableString.append(");");
         
                 
@@ -89,11 +90,12 @@ public class DBCmd {
         return mutableString.toString();
     }
     
-    public boolean validUser(String Email, String Password){
+    public int[] validUser(String Email, String Password){
         ResultSet rs = null;
+        int[] result = new int[2];
         String queryString = 
-                "SELECT Email, Password "
-                + "FROM customer "
+                "SELECT Email, Password, Type "
+                + "FROM User "
                 + "WHERE Email='"+Email+"'"
                 + "AND Password='"+Password+"';";
         System.out.println("QueryString is: "+queryString);
@@ -105,18 +107,28 @@ public class DBCmd {
             e.printStackTrace();
         }
         try{
-        if(rs.next())
+        if(this.getRowCount(rs)>=1)
         {
-            return true;
+              int Type = -1;
+              result[0]=1;
+              
+              if(rs.absolute(1)){
+                  Type = rs.getInt("Type");
+                  result[1]=Type;
+                  System.out.println("Type is: "+result[1]);
+              }
+              
+              return result;
         }
         else{
-            return false;
+            result[0]=0;
+            return result;
         }
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return false;
+        return result;
         
     }
     
@@ -145,6 +157,22 @@ public class DBCmd {
         }
         
         return null;
+    }
+    
+    
+    public int getRowCount(ResultSet rs){
+        int rowCount=0;
+        try{
+        if(rs.last())
+        {
+            rowCount = rs.getRow();
+            rs.beforeFirst();
+        }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return rowCount;
     }
 
     

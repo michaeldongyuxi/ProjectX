@@ -22,7 +22,7 @@
         <form action="Confirmation" method="post">
             <input type="hidden" name="messageType" value="login">
             <div>Username:</div>
-            <input type="text" name="username"/><br><br>
+            <input type="text" name="Email"/><br><br>
             <div>Password:</div>
             <input type="password" name="password"><br>
             <input type="submit" value="Login">

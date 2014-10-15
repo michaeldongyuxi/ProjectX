@@ -14,11 +14,11 @@ public class test {
     
     public static void main(String[] args){
         DBCmd d = new DBCmd();
-        d.addUser(1, "123", "456", "789", "10");
+        d.addUser(1, "123", "456", "789", "10", 3);
         
         
-        boolean check = d.validUser("7891", "101");
-        if(check)
+        int[] check = d.validUser("789", "10");
+        if(check[0]==Constants.LOGIN_MATCHED)
         {
             System.out.println("Matched");
         }

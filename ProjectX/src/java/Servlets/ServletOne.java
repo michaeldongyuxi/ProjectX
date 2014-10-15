@@ -6,6 +6,7 @@
 
 package Servlets;
 
+import Classes.Constants;
 import Classes.DBCmd;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -97,14 +98,26 @@ public class ServletOne extends HttpServlet {
         
         else if(action.equals("login"))
         {
-            String username = request.getParameter("username");
+            String Email = request.getParameter("Email");
             String password = request.getParameter("password");
-            if(username.equals("projectx") && password.equals("helloworld"))
-            {
-                url = "/welcome.jsp";
+            url="";
+            int[] checkLogin = cmd.validUser(Email, password);
+            if(checkLogin[0]==1){
+                int Type = checkLogin[1];
+                switch(Type){
+                    case Constants.ADMIN: 
+                        url="/AdminWelcome.jsp";
+                        break;
+                    case Constants.RESTURANT:
+                        url="/ResturantWelcome.jsp";
+                        break;
+                    case Constants.CUSTOMER:
+                        url="/CustomerWelcome.jsp";
+                        break;
+                }
                 sc.getRequestDispatcher(url).forward(request, response);
             }
-            else
+            else 
             {
                 url = "/Login.jsp";
                 sc.getRequestDispatcher(url).forward(request, response);
@@ -120,14 +133,13 @@ public class ServletOne extends HttpServlet {
         else if(action.equals("addCust"))
         {
             url = "/ThanksForSignUp.jsp";
-            
-            
+          
             String password = request.getParameter("password");
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
             
-            cmd.addUser(1, lastName, firstName, email, password);
+            cmd.addUser(1, lastName, firstName, email, password, 3);
             
             request.setAttribute("totalCust", 100);
             
